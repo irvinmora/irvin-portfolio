@@ -1,0 +1,58 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Sistema de Gestión de Inventarios",
+      "description": "Sistema web completo para gestión de inventarios con PHP y MySQL. Incluye CRUD completo, reportes y autenticación de usuarios.",
+      "technologies": ["PHP", "MySQL", "HTML", "CSS", "JavaScript"],
+      "github": "https://github.com/tu-usuario/inventario-system",
+      "demo": "#",
+      "category": "full-stack"
+    },
+    {
+      "id": 2,
+      "title": "E-commerce Básico",
+      "description": "Tienda online con carrito de compras, gestión de productos y sistema de pedidos. Desarrollado como proyecto de aprendizaje.",
+      "technologies": ["PHP", "JavaScript", "CSS", "MySQL"],
+      "github": "https://github.com/tu-usuario/ecommerce-basico",
+      "demo": "#",
+      "category": "full-stack"
+    },
+    {
+      "id": 3,
+      "title": "Blog Personal con CMS",
+      "description": "Sistema de blog personal con panel de administración para crear, editar y eliminar artículos. Incluye comentarios.",
+      "technologies": ["PHP", "PostgreSQL", "HTML5", "CSS3"],
+      "github": "https://github.com/tu-usuario/personal-blog",
+      "demo": "#",
+      "category": "full-stack"
+    },
+    {
+      "id": 4,
+      "title": "Aplicación de Tareas (To-Do)",
+      "description": "Aplicación web para gestión de tareas con interfaz responsive. Permite crear, completar y eliminar tareas.",
+      "technologies": ["JavaScript", "HTML", "CSS", "LocalStorage"],
+      "github": "https://github.com/tu-usuario/todo-app",
+      "demo": "#",
+      "category": "frontend"
+    },
+    {
+      "id": 5,
+      "title": "Sistema de Reservas",
+      "description": "Sistema para reservas de citas con validación de fechas y horarios. Incluye panel de administración.",
+      "technologies": ["PHP", "JavaScript", "MySQL", "Bootstrap"],
+      "github": "https://github.com/tu-usuario/booking-system",
+      "demo": "#",
+      "category": "full-stack"
+    },
+    {
+      "id": 6,
+      "title": "Portafolio Interactivo",
+      "description": "Portafolio web responsive con animaciones y diseño moderno. Este mismo proyecto.",
+      "technologies": ["HTML5", "CSS3", "JavaScript", "Responsive"],
+      "github": "https://github.com/tu-usuario/portfolio",
+      "demo": "#",
+      "category": "frontend"
+    }
+  ]
+}
