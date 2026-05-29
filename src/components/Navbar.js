@@ -43,17 +43,8 @@ export default function Navbar() {
 
       <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ""}`}>
         <div className={`container ${styles.navContainer}`}>
-          {/* Hamburger — LEFT side on mobile */}
-          <button
-            className={styles.menuBtn}
-            onClick={() => setIsOpen((prev) => !prev)}
-            aria-label={isOpen ? "Cerrar menú" : "Abrir menú"}
-            aria-expanded={isOpen}
-          >
-            <i className={`fas ${isOpen ? "fa-times" : "fa-bars"}`} />
-          </button>
 
-          {/* Logo */}
+          {/* Logo — LEFT */}
           <a href="#inicio" className={styles.logo} onClick={closeMenu}>
             <span className={styles.logoIcon}>
               <i className="fas fa-code" />
@@ -75,6 +66,17 @@ export default function Navbar() {
               </a>
             ))}
           </div>
+
+          {/* Hamburger — RIGHT */}
+          <button
+            className={styles.menuBtn}
+            onClick={() => setIsOpen((prev) => !prev)}
+            aria-label={isOpen ? "Cerrar menú" : "Abrir menú"}
+            aria-expanded={isOpen}
+          >
+            <i className={`fas ${isOpen ? "fa-times" : "fa-bars"}`} />
+          </button>
+
         </div>
       </nav>
     </>
