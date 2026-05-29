@@ -116,11 +116,13 @@
   z-index: 9998;
   backdrop-filter: blur(2px);
   opacity: 0;
+  pointer-events: none;    /* ← never blocks clicks when closed */
   transition: opacity 0.3s ease;
 }
 
 .overlay.active {
   opacity: 1;
+  pointer-events: auto;    /* ← only intercepts clicks when menu open */
 }
 
 /* ============================================
@@ -145,9 +147,10 @@
     justify-content: center;
   }
 
-  /* Show overlay */
+  /* Show overlay — pointer-events still none until .active */
   .overlay {
     display: block;
+    pointer-events: none;
   }
 
   /* Drawer slides in from the LEFT */
