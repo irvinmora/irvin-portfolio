@@ -1,0 +1,38 @@
+.aboutGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.aboutCard {
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.cardIcon {
+  font-size: 3rem;
+  color: var(--accent-primary);
+  margin-bottom: 1.5rem;
+  display: inline-block;
+  background: rgba(59, 130, 246, 0.1);
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  border-radius: 50%;
+  transition: var(--transition);
+}
+
+.aboutCard:hover .cardIcon {
+  transform: translateY(-10px);
+  background: var(--gradient);
+  color: white;
+}
+
+.aboutCard h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.aboutCard p {
+  color: var(--text-secondary);
+}

@@ -1,0 +1,79 @@
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.projectCard {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.projectHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.projectIcon {
+  font-size: 2rem;
+  color: var(--accent-primary);
+  background: rgba(59, 130, 246, 0.1);
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+}
+
+.projectTags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.projectTag {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.projectContent {
+  flex-grow: 1;
+  margin-bottom: 2rem;
+}
+
+.projectContent h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.projectContent p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.projectFooter {
+  border-top: 1px solid var(--border-color);
+  padding-top: 1.5rem;
+  margin-top: auto;
+}
+
+.projectLink {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-primary);
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.projectLink:hover {
+  color: var(--accent-primary);
+  transform: translateX(5px);
+}
