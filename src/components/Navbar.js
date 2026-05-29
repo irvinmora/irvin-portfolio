@@ -27,7 +27,7 @@ export default function Navbar() {
       <div className={`container ${styles.navContainer}`}>
         <a href="#inicio" className={styles.logo}>
           <span className={styles.logoIcon}><i className="fas fa-code"></i></span>
-          <span className={styles.logoText}>ING: Irvin Adonis Mora Paredes</span>
+          <span className={styles.logoText}>Irvin Adonis Mora Paredes</span>
         </a>
 
         <div className={`${styles.navMenu} ${isOpen ? styles.active : ""}`}>
