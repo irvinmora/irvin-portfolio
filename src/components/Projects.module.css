@@ -20,7 +20,7 @@
 .projectIcon {
   font-size: 2rem;
   color: var(--accent-primary);
-  background: rgba(59, 130, 246, 0.1);
+  background: rgba(34, 197, 94, 0.1);
   width: 60px;
   height: 60px;
   display: flex;

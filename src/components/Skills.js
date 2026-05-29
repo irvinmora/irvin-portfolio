@@ -24,7 +24,9 @@ export default function Skills() {
       "Git & GitHub": { type: "class", value: "devicon-github-original" },
       "VS Code": { type: "class", value: "devicon-vscode-plain colored" },
       "Figma": { type: "class", value: "devicon-figma-plain colored" },
-      "Antigravity": { type: "img", value: "https://antigravity.google/assets/image/antigravity-logo.png" }
+      "Antigravity": { type: "img", value: "https://antigravity.google/assets/image/antigravity-logo.png" },
+      "ChatGPT": { type: "img", value: "https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg" },
+      "DeepSeek": { type: "img", value: "https://upload.wikimedia.org/wikipedia/commons/9/95/DeepSeek-icon.svg" }
     };
     return iconMap[name] || { type: "class", value: "fas fa-code" };
   };
@@ -32,7 +34,7 @@ export default function Skills() {
   const renderIcon = (name, iconClass) => {
     const icon = getIcon(name);
     if (icon.type === "img") {
-      return <img src={icon.value} alt={name} className={iconClass} style={{ width: "1em", height: "1em", objectFit: "contain", filter: "brightness(0) invert(1)" }} />;
+      return <img src={icon.value} alt={name} className={iconClass} style={{ width: "1.8rem", height: "1.8rem", objectFit: "contain" }} />;
     }
     return <i className={`${icon.value} ${iconClass}`}></i>;
   };
@@ -55,11 +57,14 @@ export default function Skills() {
               </div>
               <div className={styles.skillsGrid}>
                 {category.items.map((skill) => (
-                  <div key={skill.name} className={styles.skillItem} title={skill.name}>
+                  <div key={skill.name} className={styles.skillItem} title={`${skill.name}: ${skill.percentage}%`}>
                     <div className={styles.skillIconWrapper} style={{ backgroundColor: categoryStyles[category.category]?.bgAccent }}>
                       {renderIcon(skill.name, styles.skillIcon)}
                     </div>
                     <span className={styles.skillName}>{skill.name}</span>
+                    <span className={`${styles.skillPercentage} ${category.category === "Frontend" ? styles.frontendBadge : styles.backendBadge}`}>
+                      {skill.percentage}%
+                    </span>
                   </div>
                 ))}
               </div>
@@ -73,11 +78,14 @@ export default function Skills() {
             </div>
             <div className={styles.skillsGrid}>
               {tools.map((tool) => (
-                <div key={tool} className={styles.skillItem} title={tool}>
+                <div key={tool.name} className={styles.skillItem} title={`${tool.name}: ${tool.percentage}%`}>
                   <div className={styles.skillIconWrapper} style={{ backgroundColor: "rgba(239, 68, 68, 0.1)" }}>
-                    {renderIcon(tool, styles.skillIcon)}
+                    {renderIcon(tool.name, styles.skillIcon)}
                   </div>
-                  <span className={styles.skillName}>{tool}</span>
+                  <span className={styles.skillName}>{tool.name}</span>
+                  <span className={`${styles.skillPercentage} ${styles.toolsBadge}`}>
+                    {tool.percentage}%
+                  </span>
                 </div>
               ))}
             </div>

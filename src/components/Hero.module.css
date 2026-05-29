@@ -47,6 +47,8 @@
   position: relative;
   display: flex;
   justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .imageBox {
@@ -56,6 +58,8 @@
   background: linear-gradient(to top, transparent, transparent);
   transition: all 0.5s ease;
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 360px;
 }
 
 .imageBox:hover {
@@ -65,11 +69,12 @@
 .profileImg {
   width: 100%;
   height: auto;
-  min-height: 400px;
+  aspect-ratio: 4/5;
   object-fit: cover;
   border-radius: 2rem;
   filter: grayscale(100%);
   transition: all 0.5s ease;
+  display: block;
 }
 
 .imageBox:hover .profileImg {

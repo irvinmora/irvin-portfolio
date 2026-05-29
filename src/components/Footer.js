@@ -15,7 +15,7 @@ export default function Footer() {
             </a>
             <p className={styles.footerTagline}>{personal.role}</p>
           </div>
-          
+
           <div className={styles.footerSocial}>
             <a href={personal.github} target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
               <i className="fab fa-github"></i>
@@ -31,10 +31,10 @@ export default function Footer() {
             </a>
           </div>
         </div>
-        
+
         <div className={styles.footerBottom}>
           <p>&copy; {new Date().getFullYear()} {personal.name}</p>
-          <p className={styles.footerNote}>Desarrollado con pasión por la tecnología</p>
+          <p className={styles.footerNote}>Proyecto personal enfocado en desarrollo frontend</p>
         </div>
       </div>
     </footer>
