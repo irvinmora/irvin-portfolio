@@ -4,25 +4,27 @@
    DESIGN TOKENS
    ============================================= */
 :root {
-  --bg-color:        #050505;
-  --bg-secondary:    #111111;
-  --text-primary:    #ffffff;
-  --text-secondary:  #a1a1aa;
-  --text-muted:      #71717a;
-  --accent-primary:  #22c55e;
-  --accent-secondary:#16a34a;
-  --gradient:        linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
-  --card-bg:         rgba(20, 20, 20, 0.6);
-  --border-color:    rgba(255, 255, 255, 0.06);
-  --shadow-sm:       0 4px 6px -1px rgba(0, 0, 0, 0.5);
-  --shadow-lg:       0 10px 40px -3px rgba(0, 0, 0, 0.8);
-  --transition:      all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --bg-color: #050505;
+  --bg-secondary: #111111;
+  --text-primary: #ffffff;
+  --text-secondary: #a1a1aa;
+  --text-muted: #71717a;
+  --accent-primary: #22c55e;
+  --accent-secondary: #16a34a;
+  --gradient: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  --card-bg: rgba(20, 20, 20, 0.6);
+  --border-color: rgba(255, 255, 255, 0.06);
+  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 10px 40px -3px rgba(0, 0, 0, 0.8);
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* =============================================
    RESET
    ============================================= */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -44,7 +46,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Outfit', sans-serif;
   font-weight: 800;
   line-height: 1.1;
@@ -168,9 +175,17 @@ ul {
 /* =============================================
    COLOUR UTILITIES
    ============================================= */
-.text-green    { color: var(--accent-primary); }
-.text-gradient { color: var(--accent-primary); }
-.space-y-4 > * + * { margin-top: 1rem; }
+.text-green {
+  color: var(--accent-primary);
+}
+
+.text-gradient {
+  color: var(--accent-primary);
+}
+
+.space-y-4>*+* {
+  margin-top: 1rem;
+}
 
 /* =============================================
    FADE-IN ANIMATION (for scroll reveal)
@@ -180,6 +195,7 @@ ul {
     opacity: 0;
     transform: translateY(28px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);

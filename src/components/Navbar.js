@@ -43,6 +43,16 @@ export default function Navbar() {
 
       <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ""}`}>
         <div className={`container ${styles.navContainer}`}>
+          {/* Hamburger — LEFT side on mobile */}
+          <button
+            className={styles.menuBtn}
+            onClick={() => setIsOpen((prev) => !prev)}
+            aria-label={isOpen ? "Cerrar menú" : "Abrir menú"}
+            aria-expanded={isOpen}
+          >
+            <i className={`fas ${isOpen ? "fa-times" : "fa-bars"}`} />
+          </button>
+
           {/* Logo */}
           <a href="#inicio" className={styles.logo} onClick={closeMenu}>
             <span className={styles.logoIcon}>
@@ -51,7 +61,7 @@ export default function Navbar() {
             <span className={styles.logoText}>Irvin Adonis Mora Paredes</span>
           </a>
 
-          {/* Nav links — desktop: flex row | mobile: side drawer */}
+          {/* Nav links — desktop: flex row | mobile: left drawer */}
           <div className={`${styles.navMenu} ${isOpen ? styles.active : ""}`}>
             {navLinks.map((link) => (
               <a
@@ -65,16 +75,6 @@ export default function Navbar() {
               </a>
             ))}
           </div>
-
-          {/* Hamburger */}
-          <button
-            className={styles.menuBtn}
-            onClick={() => setIsOpen((prev) => !prev)}
-            aria-label={isOpen ? "Cerrar menú" : "Abrir menú"}
-            aria-expanded={isOpen}
-          >
-            <i className={`fas ${isOpen ? "fa-times" : "fa-bars"}`} />
-          </button>
         </div>
       </nav>
     </>
