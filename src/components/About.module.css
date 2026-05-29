@@ -1,38 +1,70 @@
+/* =============================================
+   ABOUT — Grid
+   ============================================= */
 .aboutGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.75rem;
 }
 
+/* ── Card ── */
 .aboutCard {
   text-align: center;
-  padding: 3rem 2rem;
+  padding: 2.5rem 2rem;
 }
 
+/* ── Icon ── */
 .cardIcon {
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: var(--accent-primary);
   margin-bottom: 1.5rem;
-  display: inline-block;
-  background: rgba(59, 130, 246, 0.1);
-  width: 80px;
-  height: 80px;
-  line-height: 80px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(34, 197, 94, 0.08);
+  width: 76px;
+  height: 76px;
   border-radius: 50%;
+  border: 1px solid rgba(34, 197, 94, 0.15);
   transition: var(--transition);
 }
 
 .aboutCard:hover .cardIcon {
-  transform: translateY(-10px);
   background: var(--gradient);
   color: white;
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(34, 197, 94, 0.25);
+  border-color: transparent;
 }
 
 .aboutCard h3 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+  font-size: 1.35rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-primary);
 }
 
 .aboutCard p {
   color: var(--text-secondary);
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+/* =============================================
+   RESPONSIVE — Mobile (≤ 640px)
+   ============================================= */
+@media (max-width: 640px) {
+  .aboutGrid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .aboutCard {
+    padding: 2rem 1.5rem;
+  }
+
+  .cardIcon {
+    width: 64px;
+    height: 64px;
+    font-size: 2rem;
+  }
 }
